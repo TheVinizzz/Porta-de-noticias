@@ -1,0 +1,43 @@
+<header class="">
+    <div class="conteiner">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="paraiba navbar-brand" href="/"><img class="logo" src="/img/logopb.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse ml-auto" id="conteudoNavbarSuportado">
+                <ul class="menuP navbar-nav ml-auto mr-3">
+                    <li class="menuL nav-item mr-2 text-center">
+                        <a class="nav-link" href="/">Noticias</a>
+                    </li>
+                    <li class="menuL nav-item mr-2 text-center">
+                        <a class="nav-link" href="#">Política</a>
+                    </li>
+                    <li class="menuL nav-item mr-2 text-center">
+                        <a class="nav-link" href="#">Esportes</a>
+                    </li>
+                    <li class="menuL nav-item mr-2 text-center">
+                        <a href="/categorias" class="nav-link">Categorias</a>
+                    </li>
+                    {{#if user}}
+                    <li class="menuL nav-item mr-2 text-center">
+                        <a href="/admin" class="nav-link">Edição</a>
+                    </li>
+                    <li class="menuL nav-item mr-2 text-center">
+                        <a href="/usuarios/logout" class="nav-link">Desconectar</a>
+                    </li>
+
+                    {{else}}
+                    {{/if}}
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+                    <input class=" form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="btn btn-outline-danger my-2 my-sm-0 " type="submit">Pesquisar</button>
+                </form>
+            </div>
+    </div>
+    </nav>
+</header>

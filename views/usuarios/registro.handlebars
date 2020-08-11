@@ -1,0 +1,24 @@
+{{#each erros}}
+<div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+<div class="text-center">
+    <form class="registro form-signin" method="post">
+
+        <h1 class="h3 mb-3 font-weight-normal">Registre-se</h1>
+        <label for="nome" class="sr-only">Nome</label>
+        <input type="text" id="inputEmail" class="form-control" placeholder="Nome" name="nome" required>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputEmail" class="form-control mt-2" placeholder="Email" name="email" required>
+        <label for="senha" class="sr-only">Senha</label>
+        <input type="password" id="senha" class="form-control mt-2" placeholder="Senha" name="senha" required>
+        <label for="senha2" class="sr-only">Repita a senha</label>
+        <input type="password" id="senha2" class="form-control mt-2" placeholder="Repita a senha" name="senha2"
+            required>
+
+        <button class="btn btn-lg btn-danger btn-block mt-4" type="submit">Registrar</button>
+        <p class="mt-5 mb-3 text-muted">&copy; Paraiba+ 2020</p>
+    </form>
+</div>

@@ -1,0 +1,24 @@
+<h2>Lista de categorias:</h2>
+<hr>
+<a href="/admin/categorias/add"><button class="btn badge-danger">Nova Categoria</button></a>
+
+{{#each categorias}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h4>{{nome}}</h4>
+        <small><br><b>Tema: {{slug}}</b></br></small>
+        <br>
+        <br>
+        <small>{{date}}</small>
+        <div class="float-right">
+            <a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-danger">Editar Categoria</button></a>
+            <form action="/admin/categorias/deletar" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-dark float-right mt-2">Deletar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{else}}
+<h4 class="mt-3 text-center">Nenhuma Categoria Registrada</h4>
+{{/each}}
